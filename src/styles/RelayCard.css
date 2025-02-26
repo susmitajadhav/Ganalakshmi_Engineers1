@@ -1,0 +1,198 @@
+/* PLC & DCS Page Styles */
+.plc-dcs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Heading */
+  .plc-dcs-main-heading {
+    font-size: 42px;
+    font-weight: bold;
+    color: #0073e6;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image & Description Section */
+  .plc-dcs-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+  }
+  
+  .plc-dcs-text {
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    padding: 20px;
+  }
+  
+  .plc-dcs-image-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .plc-dcs-image {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .plc-dcs-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Features & Applications Section */
+  .plc-dcs-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+  }
+  
+  .plc-dcs-features,
+  .plc-dcs-applications {
+    flex: 1;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  
+  }
+  
+  .plc-dcs-sub-heading {
+    font-size: 24px;
+    color: #444;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Features List */
+  .plc-dcs-features-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .plc-dcs-features-list li {
+    font-size: 18px;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .plc-dcs-features-list li:hover {
+    color: #0073e6;
+  }
+  
+  .plc-dcs-icon {
+    font-size: 22px;
+    color: #0073e6;
+    margin-right: 10px;
+  }
+  
+  /* Applications List */
+  .plc-dcs-applications-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .plc-dcs-applications-list li {
+    font-size: 18px;
+    margin: 8px 0;
+    position: relative;
+    padding-left: 25px;
+    color: #444;
+  }
+  
+  .plc-dcs-applications-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: #0073e6;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Contact */
+  .plc-dcs-contact-info {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0073e6;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .plc-dcs-content {
+      flex-direction: column;
+    }
+  
+    .plc-dcs-details {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .plc-dcs-content {
+      flex-direction: column;
+    }
+  
+    .plc-dcs-details {
+      flex-direction: column;
+    }
+  
+    .plc-dcs-main-heading {
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+  
+    .plc-dcs-text {
+      font-size: 14px;
+      align-items: center;
+      padding-top: 0px;
+    }
+  
+    .plc-dcs-content {
+      margin: 0px;
+      gap: 2px;
+    }
+  
+    .plc-dcs-sub-heading {
+      font-size: 20px;
+      display: block;
+    }
+  
+    .plc-dcs-features-list li {
+      font-size: 14px;
+    }
+  
+    .plc-dcs-applications-list li {
+      font-size: 14px;
+    }
+  
+    .plc-dcs-contact-info {
+      font-size: 15px;
+    }
+  }

@@ -1,0 +1,296 @@
+/* --------------------------------------- */
+/* 1. Universal Reset & Body Configuration */
+/* --------------------------------------- */
+/* Import Stylish Font */ 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent any horizontal scroll */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* --------------------------------------- */
+/* 2. Consultancy Container Styles         */
+/* --------------------------------------- */
+.consultancy-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: nowrap; /* We'll adjust to wrap in media queries */
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #c2e9fb);
+  border-radius: 15px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.5s ease-in-out;
+  gap: 0px;
+  max-width: 1440px;
+  width: 90%;
+  overflow-x: hidden; /* Hide horizontal scroll by default */
+}
+
+/* --------------------------------------- */
+/* 3. Image Container & Image Styles       */
+/* --------------------------------------- */
+.image-container1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 0;
+}
+
+.image1 {
+  width: 100%;
+  max-width: 100%;
+  height: auto; /* Let the image adjust in height naturally */
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.image1:hover {
+  transform: scale(1.05);
+}
+
+/* --------------------------------------- */
+/* 4. Information Container Styles         */
+/* --------------------------------------- */
+.info-container1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1s ease-in-out;
+  margin: 0;
+}
+
+/* --------------------------------------- */
+/* 5. Title, Description, & List Styles    */
+/* --------------------------------------- */
+.consultancy_title {
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.consultancy_description {
+  font-size: 26px;
+  font-weight: 500;
+  color: #0f8322;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.consultancy_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.consultancy_list li {
+  font-size: 20px;
+  font-weight: 500;
+  color: #444;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Bullet Icons */
+.consultancy_list li::before {
+  content: "✔";
+  font-weight: bold;
+  color: #ff7e5f;
+  font-size: 20px;
+}
+
+/* Additional Info */
+.consultancy_additional-info {
+  font-size: 15px;
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* --------------------------------------- */
+/* 6. Responsive Adjustments               */
+/* --------------------------------------- */
+
+/* ----- 1024px & below (Large Tablets) ----- */
+@media (max-width: 1024px) {
+  .consultancy-container {
+    flex-direction: column; /* Stack elements vertically */
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 95%;
+    max-width: 100%;
+    overflow-x: hidden; /* Hide horizontal scroll */
+  }
+
+  .consultancy_title {
+    font-size: 30px;
+  }
+
+  .consultancy_description {
+    font-size: 22px;
+  }
+
+  .consultancy_list li {
+    font-size: 18px;
+  }
+
+  .image-container1 {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image1 {
+    width: 100%;
+   
+    object-fit: contain;
+  }
+
+  .info-container1 {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* ----- 768px & below (Tablets & Small Devices) ----- */
+@media (max-width: 768px) {
+  .consultancy-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    animation: none !important; /* Disable animation for small screens */
+    overflow-x: hidden;
+  }
+
+  .consultancy_title {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  .consultancy_description {
+    font-size: 22px;
+  }
+
+  .consultancy_list li {
+    font-size: 18px;
+  }
+
+  .consultancy_additional-info {
+    font-size: 14px;
+  }
+
+  .image-container1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image1 {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .info-container1 {
+    padding: 15px;
+  }
+}
+
+/* ----- 480px & below (Mobile Phones) ----- */
+@media (max-width: 480px) {
+  .consultancy-container {
+    padding: 10px;
+    width: 100%;
+    overflow-x: hidden; /* Only hide horizontal scroll */
+  }
+
+  .image-container1 {
+    padding: 5px;
+  }
+
+ 
+  .info-container1 {
+    padding: 15px;
+  }
+
+  .consultancy_title {
+    font-size: 26px;
+  }
+
+  .consultancy_description {
+    font-size: 20px;
+  }
+
+  .consultancy_list li {
+    font-size: 16px;
+  }
+
+  .consultancy_additional-info {
+    font-size: 12px;
+  }
+
+  /* Disable transform scale on hover for small screens */
+  .image1:hover {
+    transform: none !important;
+  }
+}
+
+/* ----- 320px & below (Very Small Phones) ----- */
+@media (max-width: 320px) {
+  .consultancy_title {
+    font-size: 19px;
+    margin-bottom: 5px;
+  }
+
+  .consultancy_description {
+    font-size: 14px;
+  }
+
+  .consultancy_list li {
+    font-size: 12px;
+    padding: 2px;
+  }
+
+  .consultancy_additional-info {
+    font-size: 11px;
+  }
+
+  .consultancy-container {
+    padding: 5px;
+    overflow-x: hidden;
+  }
+
+  
+}

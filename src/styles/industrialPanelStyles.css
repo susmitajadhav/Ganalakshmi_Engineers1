@@ -1,0 +1,240 @@
+/* Industrial Panel Main Container */
+.industrial-panel-container {
+    max-width: 90%; /* Reduce width slightly on smaller screens */
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Heading */
+.main-heading {
+    font-size: 3rem;
+    color: #048038;
+    margin-bottom: 15px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+/* Subheading h2 */
+.sub-heading {
+    font-size: 2rem;
+    color: #0b3d91;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Underline Effect */
+.sub-heading::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: #0b3d91;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Subheading h3 */
+h3 {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+h3:hover {
+    color: #0b3d91;
+}
+
+
+/* Description */
+
+
+/* Default layout (for larger screens) */
+.panel-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Each individual card */
+.panel-card {
+    width: 250px;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+.panel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.panel-image {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Panel Title */
+.panel-title {
+    font-size: 1.3rem;
+    color: #0b3d91;
+    margin: 10px 0;
+}
+
+/* Panel Description */
+/* Default Styling for Large Screens */
+.panel-description-text {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Features List */
+.features-list, .applications-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.features-list li, .applications-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Bullet Styling */
+.features-list li::before, .applications-list li::before {
+    content: "✔";
+    color: #0b3d91;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 1.2rem;
+    color: #0b3d91;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Features & Applications - Side by Side on Large Screens */
+.features-applications-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 80px;
+   
+    text-align:center;
+    align-items: flex-start;
+}
+
+/* Ensure both sections take equal width */
+.features-list, .applications-list {
+    flex: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+/* ✅ Responsive Fix for Tablets (Max Width: 768px) */
+@media screen and (max-width: 768px)  {
+    .panel-cards {
+        flex-direction: column !important; /* Stack cards vertically */
+        align-items: center !important; /* Center align */
+    }
+
+    .panel-card {
+        width: 90% !important; /* Take up most of the screen width */
+        max-width: 400px !important; /* Set max width for better layout */
+    }
+
+    .features-applications-container {
+        display: block!important; /* Remove flex/grid */
+    }
+
+    .features-list, .applications-list {
+        width: 100%;
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    .panel-cards {
+        flex-direction: column !important; /* Stack cards vertically */
+        align-items: center !important; /* Center align */
+    }
+
+    .panel-card {
+        width: 90% !important; /* Take up most of the screen width */
+        max-width: 400px !important; /* Set max width for better layout */
+    }
+
+    .features-applications-container {
+        display: block!important; /* Remove flex/grid */
+    }
+
+    .features-list, .applications-list {
+        width: 100%;
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+
+    .main-heading {
+        font-size: 2rem;     
+    }
+    .sub-heading {
+        font-size: 1.3rem;
+    }
+    .features-list li, .applications-list li {
+        font-size: 0.9rem;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+    }
+
+    .panel-description-text {
+        font-size: 1rem;
+    }
+}
+
+
+

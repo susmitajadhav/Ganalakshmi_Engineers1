@@ -1,0 +1,401 @@
+/* ---- Container Styling ---- */
+.manufacturing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* ---- Page Title ---- */
+  .manufacturing-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #048038;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideInDown 1s ease-in-out forwards;
+  }
+  
+  /* ---- Image and Description Section ---- */
+  .manufacturing-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
+  
+  .manufacturing-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .manufacturing-image {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* ---- Hover Effect on Image ---- */
+  .manufacturing-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ---- Description Text ---- */
+  .manufacturing-description {
+    flex: 1;
+    font-size: 1.8rem !important;
+    color: #555;
+    text-align: left;
+    line-height: 1.1;
+    opacity: 0;
+    animation: slideInRight 1s ease-in-out forwards;
+  }
+  
+  /* ---- Subheading Styling ---- */
+  .manufacturing-subheading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5e00;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
+  
+  /* ------------------------------
+     NEW CLASS FOR "Mill & its Spares"
+  ------------------------------- */
+  .card-heading {
+    color: #033563;       /* Change to any color you like */
+    font-size: 1.9rem;      /* Adjust the font size */
+    font-weight: bold;    /* Make it bold if you wish */
+    margin-top: 10px;     /* Add some spacing if desired */
+  }
+  
+  .card-para {
+    font-size: 1.5rem;      /* Adjust the font size */
+  }
+  
+  /* ---- Card Container ---- */
+  .card-container {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 30px 0;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
+  
+  /* ---- Card Styling ---- */
+  .manufacturing-card {
+    background:  #f7f6f6;
+    color: #000;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* ---- Card Hover Effect ---- */
+  .manufacturing-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* ---- Card Image Styling ---- */
+  .card-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* ---- Image Bounce Effect ---- */
+  .manufacturing-card:hover .card-image {
+    transform: translateY(-8px);
+  }
+  
+  /* ---- List Styling ---- */
+  .manufacturing-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    opacity: 0;
+    animation: fadeIn 1.3s ease-in-out forwards;
+  }
+  
+  .manufacturing-list li {
+    font-size: 25px;
+    color: #333;
+    padding: 8px 0;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* ---- List Hover Effect ---- */
+  .manufacturing-list li:hover {
+    transform: translateX(10px);
+    color: #ff5e00;
+  }
+  
+  /* ---- Contact Info Styling ---- */
+  .manufacturing-contact {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 20px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  /* ---- Button Styling ---- */
+  .manufacturing-button {
+    background: linear-gradient(to right, #ff5e00, #ff8c00);
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* ---- Button Hover Effect ---- */
+  .manufacturing-button:hover {
+    background: linear-gradient(to right, #ff8c00, #ff5e00);
+    box-shadow: 0 4px 10px rgba(255, 94, 0, 0.5);
+  }
+  
+  /* ---- Animations ---- */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ---- Responsive Design ---- */
+  @media (max-width: 1024px) {
+    .manufacturing-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .manufacturing-description {
+      text-align: center;
+    }
+    .manufacturing-image {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .manufacturing-title {
+      font-size: 2.2rem;
+    }
+  
+    /* ---- Container Styling ---- */
+    .manufacturing-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+  
+    /* ---- Page Title ---- */
+    .manufacturing-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #048038;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: slideInDown 1s ease-in-out forwards;
+    }
+  
+    /* ---- Image and Description Section ---- */
+    .manufacturing-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 1.2s ease-in-out forwards;
+    }
+  
+    .manufacturing-image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+  
+    .manufacturing-image {
+      max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.4s ease-in-out;
+    }
+    .manufacturing-list li {
+      font-size: 17px;
+    }
+    .manufacturing-image:hover {
+      transform: scale(1.05);
+    }
+  
+    .manufacturing-description {
+      font-size: 1.2rem!important;
+      
+    }
+  
+    .manufacturing-subheading {
+      font-size: 1.3rem;
+      margin-top: 50px;
+    }
+  
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0;
+      opacity: 0;
+      animation: fadeIn 1.2s ease-in-out forwards;
+    }
+    .card-heading {
+      font-size: 1.3rem;      /* Adjust the font size */
+     
+    }
+    .card-para {
+      font-size: 1rem;      /* Adjust the font size */
+    }
+  
+    .manufacturing-card {
+      background: #e2e2e2;
+      color: #000;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  
+    .manufacturing-card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    }
+  
+    .card-image {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .manufacturing-card:hover .card-image {
+      transform: translateY(-8px);
+    }
+  
+    .manufacturing-list {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      margin: 20px auto;
+      max-width: 800px;
+      opacity: 0;
+      animation: fadeIn 1.3s ease-in-out forwards;
+    }
+  
+    .manufacturing-list li:hover {
+      transform: translateX(10px);
+      color: #ff5e00;
+    }
+  
+    .manufacturing-contact {
+      font-size: 1.2rem;
+      color: #444;
+      margin-top: 20px;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+  
+    .manufacturing-button {
+      background: linear-gradient(to right, #ff5e00, #ff8c00);
+      color: white;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.4s ease-in-out;
+    }
+  
+    .manufacturing-button:hover {
+      background: linear-gradient(to right, #ff8c00, #ff5e00);
+      box-shadow: 0 4px 10px rgba(255, 94, 0, 0.5);
+    }
+  
+   
+     
+  }
+  
+  
+  
+  

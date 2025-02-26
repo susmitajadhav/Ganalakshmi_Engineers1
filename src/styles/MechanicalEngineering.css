@@ -1,0 +1,192 @@
+/* MechanicalEngineering.css */
+
+.containers {
+    display: flex; /* Default flex layout for laptops and larger screens */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .image-container {
+    flex: 1;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 600px; /* Increased image size */
+    height: 20rem; /* Increased height */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-size: 2rem; /* Adjusted font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Centered the title */
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  .list {
+    font-size: 1rem;
+    color: #555;
+    list-style-type: none; /* Removed default bullets */
+    padding-left: 20px;
+    margin-bottom: 15px;
+    animation: fadeIn 0.5s ease-in-out; /* Add animation */
+  }
+  
+  .list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .list li::before {
+    content: "\2022"; /* Unicode for bullet point */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #007bff; /* Blue color for bullet points */
+    font-size: 1.5rem;
+    animation: bounce 0.8s infinite alternate; /* Add bounce animation */
+  }
+  
+  .sub-list {
+    font-size: 1rem;
+    color: #555;
+    list-style-type: none;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .sub-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .sub-list li::before {
+    content: "\25E6"; /* Unicode for circle bullet */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745; /* Green color for sub-list bullet points */
+    font-size: 1.2rem;
+  }
+  
+  .additional-info {
+    font-size: 1rem;
+    color: #333;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: justify;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Responsive Design */
+  
+  /* For tablets and smaller screens */
+  @media (max-width: 1024px) {
+    .containers {
+      flex-direction: column; /* Stack elements vertically */
+      padding: 30px 15px;
+    }
+  
+    .image-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .image {
+      width: 90%;
+      height: auto;
+      border-radius: 5px;
+    }
+  
+    .info-container {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 2rem; /* Adjusted for smaller screens */
+    }
+  
+    .description,
+    .list,
+    .sub-list,
+    .additional-info {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 480px) {
+    .containers {
+      padding: 15px 10px;
+    }
+  
+    .image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .description,
+    .list,
+    .sub-list,
+    .additional-info {
+      font-size: 0.95rem;
+    }
+  }
+  
+  

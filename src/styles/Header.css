@@ -1,0 +1,186 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "", sans-serif;
+  padding: 1.5rem 2.5rem;
+  background: linear-gradient(45deg, #74ad70, #4e8d4c);
+  color: white;
+  position: relative;
+  height: 4rem;
+}
+
+/* Apply Poppins font */
+.header, 
+.nav-links a, 
+.custom-get-quote-btn, 
+.side-menu-links a, 
+.show-all-btn {
+    font-family: "Poppins", sans-serif;
+}
+
+
+.logo img {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdf5f;
+}
+
+/* Get a Quote Button */
+.custom-get-quote-btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff6666, #ff9999);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(31, 98, 165, 0.4);
+}
+
+.custom-get-quote-btn:hover {
+  background: white;
+  color: #ff6666;
+  border: 2px solid #ff6666;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Side Menu (Glassmorphism Effect) */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: rgba(4, 128, 56, 0.85);
+  backdrop-filter: blur(12px);
+  color: white;
+  padding-top: 3rem;
+  transition: transform 0.4s ease-in-out;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4);
+  transform: translateX(100%);
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.side-menu-links li {
+  padding: 1rem;
+}
+
+.side-menu-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.side-menu-links a:hover {
+  color: #fdd835;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .custom-get-quote-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .side-menu {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: row;
+    padding: 0.8rem;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .custom-get-quote-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .menu-btn {
+    font-size: 20px;
+  }
+
+  .side-menu {
+    width: 100%;
+  }
+}
