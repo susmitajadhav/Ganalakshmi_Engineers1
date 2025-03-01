@@ -148,7 +148,7 @@ const Projects = () => {
 
     {/* Meet Our People */}
       <section className="meet-our-member">
-        <h2>Meet Our People</h2>
+        <h2 className="meethead" >Meet Our People</h2>
         <p>
           We are a team of passionate professionals committed to excellence.
         </p>
@@ -160,7 +160,7 @@ const Projects = () => {
               alt="John Doe"
               className="people-photo"
             />
-            <h3>John Doe</h3>
+            <h3 > John Doe</h3>
             <p className="position">Chief Executive Officer</p>
             <p className="intro">
               A visionary leader with 20+ years of experience in the engineering

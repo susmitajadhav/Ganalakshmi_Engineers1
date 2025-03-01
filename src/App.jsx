@@ -28,6 +28,7 @@ import LTInstallation  from './components/LTInstallation';
 import Solar from  './components/Solar';
 import ReviewSection from  './components/ReviewSection';
 import BlogPage from './pages/BlogPage'
+import JointVenture from "./components/JointVenure";
 
 const App = () => {
   return (
@@ -61,6 +62,7 @@ const App = () => {
         <Route path="/LTInstallation" element={<LTInstallation />} />
         <Route path="/solar" element={<Solar />} />
         <Route path="/review" element={<ReviewSection />} />
+        <Route path="/jointventure" element={<JointVenture />} />
 
       </Routes>
     </Router>

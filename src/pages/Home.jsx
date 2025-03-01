@@ -7,7 +7,8 @@ import WhatWeOffer from "../components/WhatWeOffer";
 import Footer from "./Footer";
 import CompanyIntro from "../components/CompanyIntro"; 
   import Projects from "../components/Projects";
-  import ReviewSection from "../components/ReviewSection";
+import JointVenture from "../components/JointVenure";
+  
   
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
      
       <ServicesPage />
       <WhatWeOffer />
-      <ReviewSection />
+      <JointVenture />
       <Footer />
     </>
   );

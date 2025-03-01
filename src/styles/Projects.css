@@ -81,6 +81,9 @@
         flex-direction: row;
         justify-content: center;
     }
+    .project-card {
+      width: 200px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -100,7 +103,7 @@
 
 @media (max-width: 480px) {
     .projects-header h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .project-card {
@@ -111,12 +114,18 @@
     .icon {
         font-size: 2.5rem;
     }
+
+    .projects-section {
+  
+      padding: 30px 20px;
+    
+  }
 }
 /* Clients Section */
 .clients-container {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    background:#faf7f7;
   }
   
   .clients-title {
@@ -145,8 +154,8 @@
   /* Grid Layout */
   .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
     justify-content: center;
     align-items: center;
   }
@@ -225,6 +234,10 @@
   @media (max-width: 768px) {
     .clients-title {
       font-size: 2rem;
+    }
+    .clients-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    
     }
   
     .client-content {
@@ -324,8 +337,13 @@
   }
   
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     color: #333;
+    margin-bottom: 5px;
+  }
+  .meethead{
+    font-size: 2.3rem;
+    color: #4e8d4c;
     margin-bottom: 5px;
   }
   
@@ -340,3 +358,10 @@
     color: #555;
     margin-top: 5px;
   }
+
+  @media (max-width: 768px) {
+    .meethead{
+      font-size: 2rem;
+      
+    }
+    }
