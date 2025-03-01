@@ -20,11 +20,7 @@ const Header = () => {
         <div className="logo">
           <Link to="/">
             {/* <img src={logo} alt="SAV-Tech Associate Logo" /> */}
-<<<<<<< HEAD
-            <h1>Ganalakshmi Engineers</h1>
-=======
             <h1>Ganalaxmi Engineers</h1>
->>>>>>> 3cce27a (Updated styles)
           </Link>
         </div>
       </div>
@@ -35,8 +31,7 @@ const Header = () => {
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
           <li><Link to="/aboutus" onClick={closeMenu}>About</Link></li>
           <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
-          <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>
-          <li><Link to="/blogpage" onClick={closeMenu}>Blog</Link></li>
+          <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>    
           <li><Link to="/contactpage" onClick={closeMenu}>Contact</Link></li>
           <li><Link to="/getquote" className="custom-get-quote-btn">Get a Quote</Link></li>
         </ul>
@@ -54,7 +49,6 @@ const Header = () => {
           <li><Link to="/aboutus" onClick={closeMenu}>About</Link></li>
           <li><Link to="/services" onClick={closeMenu}>Services</Link></li>    
           <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>
-          <li><Link to="/blogpage" onClick={closeMenu}>Blog</Link></li>
           <li><Link to="/contactpage" onClick={closeMenu}>Contact</Link></li>
           <li><Link to="/getquote" className="get-quote-btn">Get a Quote</Link></li>
         </ul>

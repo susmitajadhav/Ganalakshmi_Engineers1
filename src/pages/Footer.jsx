@@ -30,7 +30,6 @@ const Footer = () => {
                 { path: "/", label: "Home" },
                 { path: "/aboutus", label: "About" },
                 { path: "/services", label: "Services" },
-                { path: "/blogpage", label: "Blog" },
                 { path: "/contactpage", label: "Contact" }
               ].map((item, index) => (
                 <li key={index}>

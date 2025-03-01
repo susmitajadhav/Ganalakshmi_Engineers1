@@ -12,11 +12,7 @@ const CompanyIntro = () => {
 
             At  <strong>Ganalaxmi Engineers,</strong> we specialize in designing and manufacturing high-performance PCC, MCC, VFD, and PLC panels, ensuring precision, reliability, and seamless industrial integration. Our expertise extends to panel design, BOM specification, earthing, lighting layouts, and cable scheduling engineering for optimized control solutions. With a commitment to cutting-edge technology and industry standards, we deliver customized solutions that enhance operational efficiency and safety. From concept to execution, our team ensures quality craftsmanship, robust performance, and seamless automation to meet diverse industrial requirements.
           </p>
-<<<<<<< HEAD
           
-=======
-
->>>>>>> 3cce27a (Updated styles)
         </div>
 
         {/* Right Side Image */}

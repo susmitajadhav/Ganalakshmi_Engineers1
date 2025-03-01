@@ -29,11 +29,9 @@ const HeroSection = () => {
         {/* Hero Content */}
         <div className="hero-content">
           <h1 className="hero-title">
-<<<<<<< HEAD
-            Welcome to <span className="highlight">GANALAKSHMI!</span>
-=======
+
             Welcome to <span className="highlight">Ganalaxmi!</span>
->>>>>>> 3cce27a (Updated styles)
+
           </h1>
           <p className="hero-description">
             Technology Innovation for Client Growth is our Growth.
