@@ -108,7 +108,7 @@ iframe {
 }
 
 .address-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #4e8d4c;
 }
 
@@ -132,6 +132,7 @@ iframe {
 
 .address-card h4 {
   color: #ff6666;
+  font-size: 1.3rem;
 }
 
 .address-card p {

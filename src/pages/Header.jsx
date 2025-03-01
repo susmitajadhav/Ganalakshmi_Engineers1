@@ -20,7 +20,11 @@ const Header = () => {
         <div className="logo">
           <Link to="/">
             {/* <img src={logo} alt="SAV-Tech Associate Logo" /> */}
+<<<<<<< HEAD
             <h1>Ganalakshmi Engineers</h1>
+=======
+            <h1>Ganalaxmi Engineers</h1>
+>>>>>>> 3cce27a (Updated styles)
           </Link>
         </div>
       </div>

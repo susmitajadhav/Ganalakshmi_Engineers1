@@ -10,15 +10,15 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-left">
-            <h4>SAV-Tech Associate</h4>
+            <h4>Ganalaxmi Engineers</h4>
             <p>
-              Innovative solutions for Sugar, Power Plant, Co-Generation,
-              Distillery, Khandsar & Jaggery industries.
+              "Ganalaxmi Engineers excels in designing and manufacturing PCC, MCC, VFD, and PLC panels, ensuring precision, reliability, and seamless industrial integration."
             </p>
             <div className="footer-contact">
-              <p><i className="fas fa-phone-alt"></i> 9850827966, 7057104851, 953613890, 9503613890</p>
-              <p><i className="fas fa-envelope"></i> officesavtech@gmail.com</p>
-              <p><i className="fas fa-map-marker-alt"></i> Flat No.101, Vrundavan Apartment, Near Kusumgandh Garden, Pradhyapak Colony, Mahadevnagar, Uran Islampur 415409.</p>
+              <p><i className="fas fa-phone-alt"></i>8999469825 ,9503613890 </p>
+              <p><i className="fas fa-envelope"></i> info@ganalaxmi.com</p>
+              <p><i className="fas fa-map-marker-alt"></i> Plot No. 27/18, Kalanagar,Sangli,
+                Maharashtra 416416.</p>
             </div>
 
           </div>
@@ -44,8 +44,8 @@ const Footer = () => {
             <h4>Projects</h4>
             <ul>
               {[
-                { path: "/manufacturing", label: "Manufacturing of Machineries" },
-                { path: "/relay-card", label: "Relay Card Act" },
+                { path: "/instrumentation", label: "Instrumentation Services" },
+                { path: "/solar", label: "EPC Solar Solutions" },
                 { path: "/industrial-panel-manufacturer", label: "Industrial Panel Manufacturing" }
               ].map((item, index) => (
                 <li key={index}>
