@@ -88,6 +88,11 @@
   display: none;
 }
 
+.logo h1{
+  font-size: 2rem;
+text-decoration-line: none;
+}
+
 /* Side Menu (Glassmorphism Effect) */
 .side-menu {
   position: fixed;
@@ -102,6 +107,7 @@
   transition: transform 0.4s ease-in-out;
   box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4);
   transform: translateX(100%);
+  z-index: 1100; /* Ensure it stays on top */
 }
 
 .side-menu.open {
@@ -151,6 +157,9 @@
     width: 120px;
   }
 
+  .logo h1{
+    font-size: 1.5rem!important;
+  }
   .custom-get-quote-btn {
     padding: 8px 16px;
     font-size: 16px;

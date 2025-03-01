@@ -144,39 +144,76 @@ const Projects = () => {
         ))}
       </div>
     </div>
-    <section className="meet-our-people">
-      <motion.h2 
-        data-aos="fade-up"
-        initial={{ opacity: 0, y: -30 }} 
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Meet Our People
-      </motion.h2>
 
-      <div className="team-container">
-        {teamMembers.map((member, index) => (
-          <motion.div
-            key={member.id}
-            className="team-card"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.6 }}
-          >
-            <div className="team-photo-container">
-              <img src={member.photo} alt={member.name} className="team-photo" />
-            </div>
-            <div className="team-details">
-              <h3>{member.name}</h3>
-              <p className="team-position">{member.position}</p>
-              <p className="team-intro">{member.intro}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+
+    {/* Meet Our People */}
+      <section className="meet-our-member">
+        <h2>Meet Our People</h2>
+        <p>
+          We are a team of passionate professionals committed to excellence.
+        </p>
+        <div className="people-grid">
+          {/* CEO */}
+          <div className="people-card">
+            <img
+              src="https://via.placeholder.com/100?text=👨‍💼"
+              alt="John Doe"
+              className="people-photo"
+            />
+            <h3>John Doe</h3>
+            <p className="position">Chief Executive Officer</p>
+            <p className="intro">
+              A visionary leader with 20+ years of experience in the engineering
+              industry.
+            </p>
+          </div>
+
+          {/* COO */}
+          <div className="people-card">
+            <img
+              src="https://via.placeholder.com/100?text=👩‍💼"
+              alt="Jane Smith"
+              className="people-photo"
+            />
+            <h3>Jane Smith</h3>
+            <p className="position">Chief Operating Officer</p>
+            <p className="intro">
+              Ensuring smooth operations and driving strategic growth
+              initiatives.
+            </p>
+          </div>
+
+          {/* Lead Engineer */}
+          <div className="people-card">
+            <img
+              src="https://via.placeholder.com/100?text=🧑‍💻"
+              alt="Michael Brown"
+              className="people-photo"
+            />
+            <h3>Michael Brown</h3>
+            <p className="position">Lead Engineer</p>
+            <p className="intro">
+              Expert in designing cutting-edge engineering solutions with
+              efficiency.
+            </p>
+          </div>
+
+          {/* Designer */}
+          <div className="people-card">
+            <img
+              src="https://via.placeholder.com/100?text=👨‍🎨"
+              alt="Emily Davis"
+              className="people-photo"
+            />
+            <h3>Emily Davis</h3>
+            <p className="position">Creative Designer</p>
+            <p className="intro">
+              Bringing innovation and aesthetics to life through unique designs.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 };

@@ -29,7 +29,7 @@ const HeroSection = () => {
         {/* Hero Content */}
         <div className="hero-content">
           <h1 className="hero-title">
-            Welcome to <span className="highlight">SAVTECH!</span>
+            Welcome to <span className="highlight">GANALAKSHMI!</span>
           </h1>
           <p className="hero-description">
             Technology Innovation for Client Growth is our Growth.

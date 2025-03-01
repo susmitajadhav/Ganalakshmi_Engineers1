@@ -1,78 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Services.css';
-
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../styles/services.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import serviceData from "../data/servicesData";
 
 const Services = () => {
-  const services = [
-    {
-      title: 'Consultancy Services',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFizBIE_eGqs2C2JL6DvXkvEKUDPQAvOEr1g&s',
-      link: "/consultancyservices"
-    },
-    {
-      title: 'Mechanical Engineering',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUBkbETGBOr5-vnTTi9th3MP-hlQUbu2aOxg&s',
-      link: "/mechanicalengineering"
-    },
-    {
-      title: 'O & M Services',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS059frnmzmI_KVvyU3GfNKC09N_JzAH79Obg&s',
-      link: "/om"
-    },
-    {
-      title: 'Instrumentation Services',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TL3L9MBpjEds4qVkIzGmBX4dNzG0I0XGeg&s',
-      link: "/instrumentation"
-    },
-    {
-      title: 'Electrical Services',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte8ZOtfehxf9J4Lr7h60LtKt61xInSzM12g&s',
-      link: "/electrical"
-    },
-    {
-      title: 'Supply of Machinery',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPzD5UjjOv5i3YfR1FwE1f7HtjszE2mJx09A&s',
-      link: "/supplyofmachinery"
-    },
-    {
-      title: 'Electrical Laisoning/Sanction',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4EnYYI_g2S7rQzLhX9r5MdEjE-yCpAGIug&s',
-      link: "/laisoning"
-    },
-    {
-      title: 'HT/LT Installation Work',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAJjb_z-5X3upA6fdfv9CpjFtsLZ0vcZw7Wg&s',
-      link: "/LTInstallation"
-    },
-    {
-      title: 'EPC Solar Solutions',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8mGwx2ERWZCWbL35Ddq_RLHOIQ8h5U02Sng&s',
-      link: "/solar"
-    }
-  ];
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
-   
-      <div className="services-container">
-        <h1 className="services-title">OUR SERVICES</h1>
+    
+    <section className="services">
+      <div className="container_services">
+        <h2 className="title_services" data-aos="fade-up">Our Services</h2>
+        <p className="subtitle_services" data-aos="fade-up">We offer top-notch services to meet your needs.</p>
         <div className="services-grid">
-          {services.map((service, index) => (
-            <Link to={service.link} className="service-card" key={index}>
-              <div className="card-image1">
-                <img src={service.image} alt={service.title} />
+          {serviceData.map((service) => (
+            <div className="service-card" key={service.id} data-aos="flip-left">
+              <div className="image-container" data-aos="zoom-in">
+                <img src={service.image} alt={service.title} className="service-img" />
               </div>
-              <div className="card-overlay"></div>
-              <div className="card-text">
-                <h2>{service.title}</h2>
-              </div>
-            </Link>
+              <h3 data-aos="fade-down">{service.title}</h3>
+              <p data-aos="fade-right">{service.description}</p>
+              <Link to={`/service/${service.id}`}>
+                <button className="animated-button" data-aos="fade-up">Learn More</button>
+              </Link>
+            </div>
           ))}
         </div>
       </div>
-   
+    </section>
+  
   );
 };
 
 export default Services;
-

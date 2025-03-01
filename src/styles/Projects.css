@@ -4,6 +4,7 @@
     background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
     text-align: center;
     padding: 60px 20px;
+    margin-bottom: 0px;
 }
 
 .projects-header h2 {
@@ -257,152 +258,85 @@
   
 
 /* Meet Our People Section */
-.meet-our-people {
+/* Meet Our People */
+.meet-our-member {
     text-align: center;
-    padding: 80px 20px;
-    background: #fcfcfc; /* Subtle white shade */
-}
-
-.meet-our-people h2 {
-    font-size: 2.8rem;
-    margin-bottom: 30px;
-    color: #4e8d4c;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-}
-
-.meet-our-people h2::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background: #ff6666;
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-}
-
-/* Team Container */
-.team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1400px;
-    margin: 0 auto;
+    margin-bottom: 60px;
     padding: 20px;
-}
-
-/* Team Card */
-.team-card {
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .people-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Default: 1 Card Per Row (Mobile View) */
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Tablets (768px) → 2 Cards Per Row */
+  @media (min-width: 768px) {
+    .people-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Laptops (1024px) → 3 Cards Per Row */
+  @media (min-width: 1024px) {
+    .people-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Large Screens (1440px and above) → 4 Cards Per Row */
+  @media (min-width: 1440px) {
+    .people-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .people-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    border-top: 5px solid #ff6666;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Hover Animation */
-.team-card:hover {
+    max-width: 300px;
+    margin: 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .people-card:hover {
     transform: translateY(-5px);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Team Photo */
-.team-photo-container {
-    width: 130px;
-    height: 130px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .people-photo {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 15px;
-    border: 4px solid #4e8d4c;
-    transition: all 0.3s ease-in-out;
-}
-
-.team-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover effect on image */
-.team-card:hover .team-photo {
-    transform: scale(1.1);
-}
-
-/* Team Member Name */
-.team-details h3 {
-    font-size: 1.8rem;
-    color: #4e8d4c;
-    margin: 12px 0 6px;
-    font-weight: 700;
-}
-
-/* Team Position */
-.team-position {
-    font-size: 1.3rem;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid #4e8d4c;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .position {
+    font-size: 1rem;
     color: #ff6666;
     font-weight: bold;
-}
-
-/* Team Intro */
-.team-intro {
-    font-size: 1rem;
-    color: #444;
-    margin-top: 8px;
-    line-height: 1.5;
-}
-
-/* Responsive Grid Layout */
-@media (min-width: 1201px) {
-    .team-container {
-        grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
-    }
-}
-
-@media (min-width: 901px) and (max-width: 1200px) {
-    .team-container {
-        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-    }
-}
-
-@media (min-width: 769px) and (max-width: 900px) {
-    .team-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    }
-}
-
-@media (min-width: 501px) and (max-width: 768px) {
-    .team-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    }
-}
-
-@media (max-width: 500px) {
-    .team-container {
-        grid-template-columns: repeat(1, 1fr); /* 1 card per row */
-    }
-
-    .meet-our-people h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;        
-    }
-
-    .team-details h3 {
-        font-size: 1.5rem;      
-    }
-
-    .team-position {
-        font-size: 1.2rem;
-    }
-}
+  }
+  
+  .intro {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }

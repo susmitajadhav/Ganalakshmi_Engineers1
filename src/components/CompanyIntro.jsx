@@ -12,7 +12,7 @@ const CompanyIntro = () => {
             Ganlakshmi Engineer Company is a trusted name in the industry, providing top-notch engineering solutions 
             with precision and expertise. Our dedicated team ensures quality, innovation, and reliability in every project.
           </p>
-          <button className="company-intro-button">Learn More</button>
+          
         </div>
 
         {/* Right Side Image */}

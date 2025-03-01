@@ -1,308 +1,428 @@
-/* General Styling */
-.about-us-page {
-    max-width: 100vw;
-    overflow-x: hidden;
+.about-us-container {
+  padding: 30px 20px;
+  background: white;
+  color: #333;
+  text-align: center;
+}
+
+
+
+/* Sections */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ff6666;
+  margin-bottom: 20px;
+}
+
+/* Meet Our People */
+.meet-our-member {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+.people-grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Default: 1 Card Per Row (Mobile View) */
+.people-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Tablets (768px) → 2 Cards Per Row */
+@media (min-width: 768px) {
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Section Headings Styling */
-  
-  .about h2,
-  .mission h2,
-  .vision h2,
-  .why-choose h2,
-  .pillars h2 {
-    color: #048038;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    text-align: center;
+}
+
+/* Laptops (1024px) → 3 Cards Per Row */
+@media (min-width: 1024px) {
+  .people-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .meet-our-people_about h2{
-    color: #048038;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 35px;
-    text-align: center;
+}
+
+/* Large Screens (1440px and above) → 4 Cards Per Row */
+@media (min-width: 1440px) {
+  .people-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  /* About Us & Why Choose Us Section Side by Side */
-  .about-why-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1300px;
-    margin: 20px auto;
-    flex-wrap: wrap;
-  }
-  
-  .about,
-  .why-choose {
-    flex: 1;
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.people-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.people-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.people-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  border: 3px solid #4e8d4c;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 1rem;
+  color: #ff6666;
+  font-weight: bold;
+}
+
+.intro {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.about-section {
+  background: #f8f9fa;
+  padding: 20px 20px;
+  text-align: center;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s forwards ease-out;
+}
+
+/* About Text */
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #4e8d4c;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1.5s forwards ease-out 0.3s;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s forwards ease-out 0.5s;
+}
+
+/* About Image */
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInZoom 1.5s forwards ease-out 0.7s;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
     text-align: left;
+    gap: 40px;
   }
-  
-  /* Mission & Vision Section Side by Side */
-  .mission-vision-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1300px;
-    margin: 20px auto;
-    flex-wrap: wrap;
-  }
-  
-  .mission,
-  .vision {
+
+  .about-text {
     flex: 1;
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
   }
-  
-  /* Remove Animation on Small Screens */
-  @media (max-width: 768px) {
-    [data-aos] {
-      opacity: 1 !important;
-      transform: none !important;
-    }
+
+  .about-image {
+    flex: 1;
+    text-align: right;
   }
-  
-  /* Main About Us Container */
-  .about-us-container {
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #f3f3f3, #e6e6e6);
-    padding: 40px 20px;
-    text-align: center;
-    color: #333;
-    margin: 10px;
+
+  .about-image img {
+    max-width: 450px;
   }
-  
-  /* Team Section */
-  .team-section {
-    text-align: center;
-    padding: 40px 20px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .team-container_about {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    max-width: 1300px;
-    margin: 0 auto;
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .team-card_about {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+}
+
+@keyframes fadeInZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .team-photo_about {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  /* Mission & Vision Sections */
-  .pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .pillar-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .pillar-card .icon {
-    font-size: 2rem;
-    color: #048038;
-  }
-  
-  /* Why Choose Us Section */
-  .why-choose ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .why-choose ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+}
+
+
+/* Why Choose Us */
+.why-choose-us {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: #4e8d4c;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1.5s forwards ease-out;
+}
+
+.why-intro {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #666;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInUp 1.5s forwards ease-out 0.3s;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+
+  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s forwards ease-out 0.5s;
+}
+
+.highlight-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa, #b4d2e6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-card h3{
+  margin-top: 0px;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover .icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.check-icon {
+  color: #4e8d4c;
+}
+
+.why-choose-us .icon:nth-child(2) {
+  color: #ff6666;
+}
+
+.why-choose-us .icon:nth-child(3) {
+  color: #007bff;
+}
+
+.why-choose-us .icon:nth-child(4) {
+  color: #ffbb33;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-intro {
     font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 10px;
   }
-  
-  .why-choose ul li::before {
-    content: "✔️";
-    color: #048038;
-    font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .about-us-container {
-      padding: 20px;
-    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @media (max-width: 768px) {
-    .section {
-      padding: 20px;
-    }
-   
-  
-    .meet-our-people_about h2,
-  .about h2,
-  .mission h2,
-  .vision h2,
-  .why-choose h2,
-  .pillars h2 {
-    color: #048038;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    text-align: center;
-  }meet-our-people_about h2,
-  .about h2,
-  .mission h2,
-  .vision h2,
-  .why-choose h2,
-  .pillars h2 {
-    
-  
-    font-size: 1.3rem!important;
-    
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* General Styling */
+.about-container_m {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #4e8d4c;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Icons */
+.icon {
+  font-size: 1.5rem;
+  color: #ff6666;
+  margin-right: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  /* 🌟 Major Fix: Team & Intro Positioning at Small Screens */
-  @media (max-width: 480px) {
-    .team-container_about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .team-card_about {
-      width: 90%;
-      margin-bottom: 15px;
-    }
-  
-    .pillars-grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-  
-    .why-choose ul li {
-      font-size: 0.9rem;
-    }
-  
-    .about p,
-    .mission p,
-    .vision p,
-    .why-choose ul li,
-    .pillars-grid .pillar-card p {
-      font-size: 15px;
-      text-align: center; /* Centers the text for better readability */
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* 🌟 Extra Small Screens (320px and below) */
-  @media (max-width: 320px) {
-    .about-why-container,
-    .mission-vision-container {
-      flex-direction: column;
-      gap: 10px;
-      padding: 10px;
-    }
-  
-    .about,
-    .why-choose,
-    .mission,
-    .vision {
-     
-      padding: 15px;
-    }
-  
-    .about p,
-    .mission p,
-    .vision p,
-    .why-choose ul li,
-    .pillars-grid .pillar-card p {
-      font-size: 12px;
-      text-align: center; /* Centers the text for better readability */
-    }
-  
-    .team-container_about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 100%;
-    }
-  
-    .team-card_about {
-      width: 100%;
-      padding: 15px;
-    }
-  
-    
-  
-    .pillars-grid {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-  
-    .section {
-      padding: 20px;
-      margin: 10px auto;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  /* Adjust Team Grid Layout */
-  @media (max-width: 1200px) {
-    .team-container_about {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @media (max-width: 1024px) {
-    .team-container_about {
-      grid-template-columns: repeat(3, 1fr);
-    }
+}
+
+.animate-section {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+/* Mission Pillars */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pillar-card {
+  background: #4e8d4c;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.pillar-card:hover {
+  background: #ff6666;
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 1.8rem;
   }
-  
-  @media (max-width: 768px) {
-    .team-container_about {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  p {
+    font-size: 1.1rem;
   }
-  
-  @media (max-width: 480px) {
-    .team-container_about {
-      grid-template-columns: repeat(1, 1fr);
-    }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
   }
-  
+  p {
+    font-size: 1rem;
+  }
+  .pillars-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .pillar-card {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}

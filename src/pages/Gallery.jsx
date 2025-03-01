@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const sections = [
   {
-    title: "MECHANICAL ENGINEERING SERVICES",
+    title: " Electrical Panel Design",
     images: [
       "https://miro.medium.com/v2/resize:fit:1400/1*CyG0u82Tl9sv5cqj3PQY6Q.jpeg",
       "https://5.imimg.com/data5/SELLER/Default/2023/9/344797345/DL/ZP/AE/77855639/mechanical-engineering-services.jpg",
@@ -15,7 +15,7 @@ const sections = [
     ],
   },
   {
-    title: "ELECTRICAL & INSTRUMENTATION SERVICES",
+    title: "EPC Solar Solutions",
     images: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKJfnKICij2jtxfOGNWvLInfIrmrs9twkQXQ&s",
       "https://corearbia.com/wp-content/uploads/2022/06/electrical-instrumentation-and-mechanical-onsite-services-1.jpg",
@@ -24,7 +24,7 @@ const sections = [
     ],
   },
   {
-    title: "O&M SERVICES",
+    title: "Design PLC Panels",
     images: [
       "https://engenda-group.com/assets/uploads/_1200xAUTO_fit_center-center_none/Electrician1.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDcu4xjEpPshZiasOCh3lp8jlwA3simnjniTDRbJv1SEzpVJ1Va6-OkBSyn9k3PaQi__0&usqp=CAU",
@@ -33,7 +33,17 @@ const sections = [
     ],
   },
   {
-    title: "CONSULTANCY SERVICES",
+    title: "Cable Scheduling & Engineering",
+    images: [
+      "https://gnrl.in/wp-content/uploads/2022/05/consulting.jpg",
+      "https://lh3.googleusercontent.com/proxy/6UatEt-I7LFKV5ajyuSqV3mgtTTLf2HSrlUbSPzUrYi58EOYwvTSIeVDnk0fNuJ9utLOSnmYcaREmLWfAaJHLNc4GLiCQJgtGyuaRsk2",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7MGNX6pApEShT0VehjP-KJ_5Ofk-PDsCbsg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtSOIgBH-vxh2svRFY2YI5GoV6uKtqoz1SDg&s",
+    ],
+  },
+
+  {
+    title: "Instrumentation Services",
     images: [
       "https://gnrl.in/wp-content/uploads/2022/05/consulting.jpg",
       "https://lh3.googleusercontent.com/proxy/6UatEt-I7LFKV5ajyuSqV3mgtTTLf2HSrlUbSPzUrYi58EOYwvTSIeVDnk0fNuJ9utLOSnmYcaREmLWfAaJHLNc4GLiCQJgtGyuaRsk2",
@@ -48,7 +58,7 @@ const Gallery = () => {
     <div className="gallery-page">
       <Header />
       
-        <h1 className="gallery-header1">Our Project Gallery</h1>
+        <h1 className="gallery-header1">See Latest Projects</h1>
       
 
       {sections.map((section, index) => (
