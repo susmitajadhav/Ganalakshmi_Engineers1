@@ -95,7 +95,7 @@ const Contact = () => {
           <div className="contact-info_c">
             <h3>Our Contact Details</h3>
             <p>
-              <strong>Email:</strong> info@ganalaxmi.com
+              <strong>Email:</strong> contactus@ganalaxmi.com
             </p>
             <p>
               <strong>Phone:</strong> +91 8999469825 , +91 9503613890

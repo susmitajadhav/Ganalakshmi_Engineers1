@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaProjectDiagram, FaUserTie, FaGraduationCap, FaCertificate,FaUsers } from "react-icons/fa";
+import { FaProjectDiagram, FaUserTie, FaGraduationCap, FaCertificate, FaUsers } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/Projects.css";
@@ -14,49 +14,13 @@ const customers = [
   { id: 3, name: "Deccan Sugars", logo: "https://cdn.pixabay.com/photo/2023/02/01/00/54/company-7759278_1280.png" },
   { id: 4, name: "Rupmata Jaggery", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCIMz4eaUQLPv43QzcuOfC_Ai8z7OA44WaHe3WmVcfYJjA9ZM0qmT434Ks9K5ZxqIM3-4&usqp=CAU" },
   { id: 5, name: "X-India Pvt. Ltd.", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN1Q3VOJFdLdtyUW-eowuvFSfjMOVctDZbVQ&s" },
- 
+
 ];
 
 
 // Team Members
 // Team Members 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Mr. Sudhir Paatil",
-    position: "Managing Director",
-    photo: "https://randomuser.me/api/portraits/men/1.jpg",
-    intro: "He has 25+ years of experience, including 11 years as Chief Engineer, 2 years as Works Manager, and 3 years as Managing Director. He led expansions of sugar plants from 1250 TCD to 3000 TCD and pioneered the erection of a 2500 TCD Sugar Plant with a 22 MW Cogeneration plant.",
-  },
-  {
-    id: 2,
-    name: "Mr. Vikas Patil",
-    position: "Project Engineer",
-    photo: "https://randomuser.me/api/portraits/men/2.jpg",
-    intro: "With 25+ years of experience, he has 18+ years as a Project Engineer in Sugar Plant manufacturing companies. He has handled numerous sugar plant erection and commissioning projects in African countries and Vietnam.",
-  },
-  {
-    id: 3,
-    name: "Mr. Amarsinh Patil",
-    position: "Project Manager",
-    photo: "https://randomuser.me/api/portraits/men/3.jpg",
-    intro: "An expert in design, installation, and project management with 8+ years of experience in Sugar Plants, Power Plants, Pharmaceuticals, and Cement Plants. Specializes in Electrical & Instrumentation work across India, Africa, and Europe.",
-  },
-  {
-    id: 4,
-    name: "Emily White",
-    position: "Marketing Lead",
-    photo: "https://randomuser.me/api/portraits/women/4.jpg",
-    intro: "Creative strategist focused on brand development and outreach.",
-  },
-  {
-    id: 5,
-    name: "Michael Green",
-    position: "Lead Developer",
-    photo: "https://randomuser.me/api/portraits/men/5.jpg",
-    intro: "Coding wizard passionate about software architecture and innovation.",
-  },
-];
+
 
 const Projects = () => {
   const [projects, setProjects] = useState(0);
@@ -130,23 +94,23 @@ const Projects = () => {
       </section>
 
       <div className="clients-container">
-      <h2 className="clients-title">Our Valued Clients</h2>
-      <div className="clients-grid">
-        {customers.map((customer) => (
-          <div className="client-item" key={customer.id}>
-            <div className="client-content">
-              <img src={customer.logo} alt={customer.name} className="client-logo" />
-              <div className="client-overlay">
-                <h3 className="client-name">{customer.name}</h3>
+        <h2 className="clients-title">Our Valued Clients</h2>
+        <div className="clients-grid">
+          {customers.map((customer) => (
+            <div className="client-item" key={customer.id}>
+              <div className="client-content">
+                <img src={customer.logo} alt={customer.name} className="client-logo" />
+                <div className="client-overlay">
+                  <h3 className="client-name">{customer.name}</h3>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
 
 
-    {/* Meet Our People */}
+      {/* Meet Our People */}
       <section className="meet-our-member">
         <h2 className="meethead" >Meet Our People</h2>
         <p>
@@ -156,11 +120,11 @@ const Projects = () => {
           {/* CEO */}
           <div className="people-card">
             <img
-              src="https://via.placeholder.com/100?text=👨‍💼"
-              alt="John Doe"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLfYc0DrKm8zisZ_NcQkJT_zhsV86GrkAYCQ&s"
+              alt="Mr. Amarsinh Patil"
               className="people-photo"
             />
-            <h3 > John Doe</h3>
+            <h3 >Mr. Amarsinh Patil</h3>
             <p className="position">Chief Executive Officer</p>
             <p className="intro">
               A visionary leader with 20+ years of experience in the engineering
@@ -171,11 +135,11 @@ const Projects = () => {
           {/* COO */}
           <div className="people-card">
             <img
-              src="https://via.placeholder.com/100?text=👩‍💼"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLfYc0DrKm8zisZ_NcQkJT_zhsV86GrkAYCQ&s"
               alt="Jane Smith"
               className="people-photo"
             />
-            <h3>Jane Smith</h3>
+            <h3>Mr. Ranjitsinh Patil</h3>
             <p className="position">Chief Operating Officer</p>
             <p className="intro">
               Ensuring smooth operations and driving strategic growth
@@ -183,8 +147,8 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Lead Engineer */}
-          <div className="people-card">
+           {/* Lead Engineer */}
+           <div className="people-card">
             <img
               src="https://via.placeholder.com/100?text=🧑‍💻"
               alt="Michael Brown"
@@ -198,14 +162,16 @@ const Projects = () => {
             </p>
           </div>
 
+        
+
           {/* Designer */}
           <div className="people-card">
             <img
-              src="https://via.placeholder.com/100?text=👨‍🎨"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKb5B_aLbXOpeHLmqaP8jOqMOfwVal7TXQsQ&s"
               alt="Emily Davis"
               className="people-photo"
             />
-            <h3>Emily Davis</h3>
+            <h3>Mrs. Amarsinh Patil</h3>
             <p className="position">Creative Designer</p>
             <p className="intro">
               Bringing innovation and aesthetics to life through unique designs.

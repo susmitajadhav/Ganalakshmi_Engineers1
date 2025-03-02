@@ -16,7 +16,7 @@ const Footer = () => {
             </p>
             <div className="footer-contact">
               <p><i className="fas fa-phone-alt"></i>8999469825 ,9503613890 </p>
-              <p><i className="fas fa-envelope"></i> info@ganalaxmi.com</p>
+              <p><i className="fas fa-envelope"></i> contactus@ganalaxmi.com</p>
               <p><i className="fas fa-map-marker-alt"></i> Plot No. 27/18, Kalanagar,Sangli,
                 Maharashtra 416416.</p>
             </div>
