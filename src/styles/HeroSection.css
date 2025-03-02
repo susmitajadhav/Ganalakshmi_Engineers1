@@ -1,15 +1,16 @@
-/* HERO SECTION STYLING */
+/* HERO SECTION */
 .hero-section {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  color: white;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  padding: 20px;
 }
 
 /* Overlay Effect */
@@ -27,14 +28,13 @@
 .hero-content {
   position: absolute;
   z-index: 2;
-  max-width: 90%;
+  max-width: 800px;
   padding: 20px;
-  text-align: center;
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-title {
-  font-size: clamp(24px, 5vw, 48px);
+  font-size: 48px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -48,7 +48,7 @@
 }
 
 .hero-description {
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: 22px;
   margin-top: 10px;
   margin-bottom: 30px;
   color: #fff;
@@ -58,24 +58,26 @@
 
 /* CTA Button */
 .cta-button {
-  padding: 12px 28px;
-  background: #ff6666;
+  padding: 14px 30px;
+  background: linear-gradient(45deg, #ff6666, #ff4d4d);
   color: white;
   text-decoration: none;
-  font-size: clamp(14px, 2vw, 18px);
-  border-radius: 8px;
+  font-size: 18px;
+  border-radius: 50px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards 1s;
+  box-shadow: 0px 4px 15px rgba(255, 102, 102, 0.5);
 }
 
 .cta-button:hover {
   background: #4e8d4c;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(78, 141, 76, 0.5);
 }
 
-/* CAROUSEL STYLING */
+/* CAROUSEL */
 .carousel-container {
   position: absolute;
   top: 0;
@@ -93,16 +95,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(85%);
 }
 
-/* SLICK DOTS CUSTOMIZATION */
+/* SLICK DOTS */
 .slick-dots {
   bottom: 15px;
 }
 
 .slick-dots li button:before {
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff6666;
 }
 
 /* ANIMATIONS */
@@ -118,7 +125,7 @@
 
 /* RESPONSIVE DESIGN */
 
-/* Tablets (Medium Screens) */
+/* Tablets */
 @media (max-width: 1024px) {
   .hero-title {
     font-size: 36px;
@@ -128,18 +135,18 @@
   }
   .cta-button {
     font-size: 16px;
-    padding: 10px 24px;
+    padding: 12px 24px;
   }
 }
 
-/* Mobile Screens */
+/* Mobile */
 @media (max-width: 768px) {
   .hero-section {
-    height: 90vh;
+    height: 85vh;
   }
 
   .hero-title {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .hero-description {
@@ -152,19 +159,18 @@
   }
 
   .carousel-image {
-    height: 90vh;
-    object-fit: cover;
+    height: 75vh;
   }
 }
 
 /* Small Mobile Screens */
 @media (max-width: 480px) {
   .hero-section {
-    height: 80vh;
+    height: 70vh;
   }
 
   .hero-title {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .hero-description {
@@ -177,7 +183,6 @@
   }
 
   .carousel-image {
-    height: 80vh;
-    object-fit: cover;
+    height: 65vh;
   }
 }

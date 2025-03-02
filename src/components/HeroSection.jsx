@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import "../styles/HeroSection.css";
 
 const HeroSection = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 800,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -42,21 +41,21 @@ const HeroSection = () => {
         <Slider {...settings}>
           <div className="carousel-item">
             <img
-              src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg"
               alt="Slide 1"
               className="carousel-image"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://images.pexels.com/photos/2628105/pexels-photo-2628105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/2628105/pexels-photo-2628105.jpeg"
               alt="Slide 2"
               className="carousel-image"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://images.pexels.com/photos/6466143/pexels-photo-6466143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/6466143/pexels-photo-6466143.jpeg"
               alt="Slide 3"
               className="carousel-image"
             />

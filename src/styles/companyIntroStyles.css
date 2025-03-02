@@ -1,5 +1,5 @@
 .company-intro-section {
-  padding: 80px 5%;
+  padding: 40px 5%;
   background: #fff;
 }
 
@@ -91,8 +91,8 @@
   }
 
   .company-intro-section {
-    padding: 30px 5%;
-  }
+    padding: 20px 5%;
+}
   .company-intro-description {
     font-size: 17px;
   }
