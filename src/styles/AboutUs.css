@@ -47,7 +47,7 @@ h2 {
 /* Laptops (1024px) → 3 Cards Per Row */
 @media (min-width: 1024px) {
   .people-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
