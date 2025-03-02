@@ -27,20 +27,17 @@
 .hero-content {
   position: absolute;
   z-index: 2;
-  max-width: 800px;
+  max-width: 90%;
   padding: 20px;
+  text-align: center;
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: clamp(24px, 5vw, 48px);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   font-style: italic;
   opacity: 0;
   animation: slideUp 1s ease-in-out forwards;
@@ -51,7 +48,7 @@
 }
 
 .hero-description {
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 20px);
   margin-top: 10px;
   margin-bottom: 30px;
   color: #fff;
@@ -61,12 +58,12 @@
 
 /* CTA Button */
 .cta-button {
-  padding: 14px 30px;
+  padding: 12px 28px;
   background: #ff6666;
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  border-radius: 5px;
+  font-size: clamp(14px, 2vw, 18px);
+  border-radius: 8px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   opacity: 0;
@@ -100,7 +97,7 @@
 
 /* SLICK DOTS CUSTOMIZATION */
 .slick-dots {
-  bottom: 10px;
+  bottom: 15px;
 }
 
 .slick-dots li button:before {
@@ -121,64 +118,66 @@
 
 /* RESPONSIVE DESIGN */
 
-/* Tablets */
+/* Tablets (Medium Screens) */
 @media (max-width: 1024px) {
   .hero-title {
-      font-size: 36px;
+    font-size: 36px;
   }
   .hero-description {
-      font-size: 18px;
+    font-size: 18px;
   }
   .cta-button {
-      font-size: 16px;
-      padding: 12px 24px;
+    font-size: 16px;
+    padding: 10px 24px;
   }
 }
 
-/* Mobile */
+/* Mobile Screens */
 @media (max-width: 768px) {
   .hero-section {
-      height: 80vh;
+    height: 90vh;
   }
 
   .hero-title {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .hero-description {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .cta-button {
-      font-size: 14px;
-      padding: 10px 20px;
+    font-size: 14px;
+    padding: 10px 20px;
   }
 
   .carousel-image {
-      height: 70vh;
+    height: 90vh;
+    object-fit: cover;
   }
 }
 
 /* Small Mobile Screens */
 @media (max-width: 480px) {
   .hero-section {
-      height: 70vh;
+    height: 80vh;
   }
 
   .hero-title {
-      font-size:16px;
+    font-size: 22px;
   }
 
   .hero-description {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .cta-button {
-      font-size: 13px;
-      padding: 8px 18px;
+    font-size: 13px;
+    padding: 8px 18px;
   }
 
   .carousel-image {
-      height: 60vh;
+    height: 80vh;
+    object-fit: cover;
   }
 }
